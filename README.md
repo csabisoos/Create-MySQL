@@ -79,3 +79,14 @@ DESCRIBE my_table;
 ```
 ```
 SELECT * FROM my_table;
+```
+## Deleting databases and tables
+It drops the existing database "my_database".
+```
+DROP DATABASE my_database;
+```
+It drops the existing table "my_table".
+```
+DROP TABLE my_table;
+```
+
