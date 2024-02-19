@@ -28,7 +28,8 @@ CREATE TABLE cats
   id              INT unsigned NOT NULL AUTO_INCREMENT, # unique ID
   name            VARCHAR(150) NOT NULL,                
   owner           VARCHAR(150) NOT NULL,                
-  birth           DATE NOT NULL,                        
+  birth           DATE NOT NULL,
+  FOREIGN  KEY    (owner) REFERENCES owner_table(name),                 
   PRIMARY KEY     (id)                                  
 );
 ```
@@ -38,6 +39,8 @@ Auto-increment: Allows a unique number to be generated automatically when a new 
 Unsigned: An unsigned type can be used to permit only nonnegative numbers in a column or when you need a larger upper numeric range for the column.
 
 Not null: Enforces a column to NOT accept NULL values.
+
+Foreign key: A field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
 
 ## Insert data into table
 ```
